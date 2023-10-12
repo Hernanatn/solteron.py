@@ -14,7 +14,6 @@ pip install solteron
 ``` 
 
 ## Uso Básico
-### :
 Puede emplear tanto `Solteron` como `Singleton` en la definición de la clase para garantizar que el patró se aplique.
 
 ```python
