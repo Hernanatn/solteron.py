@@ -23,7 +23,7 @@ __all__ = ['Solteron', 'Singleton']
 class Solteron(type):
     __instancias : dict = {}
 
-    def __call__(cls, *args, **kwargs):
+    def __new__(cls, *args, **kwargs):
         if cls not in cls.__instancias:
             cls.__instancias[cls] = super(Solteron, cls).__call__(*args, **kwargs)
         return cls.__instancias[cls]
