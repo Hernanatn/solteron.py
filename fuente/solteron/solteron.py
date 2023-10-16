@@ -25,7 +25,7 @@ class Solteron(type):
 
     def __new__(cls, *args, **kwargs):
         if cls not in cls.__instancias:
-            cls.__instancias[cls] = super(Solteron, cls).__call__(*args, **kwargs)
+            cls.__instancias[cls] = super(Solteron, cls).__new__(*args, **kwargs)
         return cls.__instancias[cls]
 
 Singleton = Solteron
