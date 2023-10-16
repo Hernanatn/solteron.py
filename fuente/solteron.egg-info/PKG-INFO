@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: solteron
-Version: 0.1.1
+Version: 0.1.2
 Summary: Patrón 'Singleton' en Python 3.
 Home-page: https://github.com/Hernanatn/solteron.py
 Download-URL: https://pypi.org/project/solteron/0.1/#files
