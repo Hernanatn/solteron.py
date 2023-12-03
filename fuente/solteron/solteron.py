@@ -14,7 +14,7 @@ Hernan ATN | herni@cajadeideas.ar
 __author__ = "Hernan ATN"
 __copyright__ = "(c) 2023, Hernán A. Teszkiewicz Novick."
 __license__ = "MIT"
-__version__ = "0.1"
+__version__ = "0.1.5"
 __email__ = "herni@cajadeideas.ar"
 
 __all__ = ['Solteron', 'Singleton']
@@ -26,7 +26,7 @@ class Solteron(type):
 
     def __call__(cls, *args, **kwargs):
         if cls not in cls.__instancias:
-            cls.__instancias[cls] = super(Solteron, cls).__call__(cls,*args, **kwargs)
+            cls.__instancias[cls] = super(Solteron, cls).__call__(*args, **kwargs)
         return cls.__instancias[cls]
 
 Singleton = Solteron
