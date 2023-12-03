@@ -24,9 +24,9 @@ from typing import Any
 class Solteron(type):
     __instancias : dict [type,Any] = {}
 
-    def __new__(cls, *args, **kwargs):
+    def __call__(cls, *args, **kwargs):
         if cls not in cls.__instancias:
-            cls.__instancias[cls] = super(Solteron, cls).__new__(cls,*args, **kwargs)
+            cls.__instancias[cls] = super(Solteron, cls).__call__(cls,*args, **kwargs)
         return cls.__instancias[cls]
 
 Singleton = Solteron
